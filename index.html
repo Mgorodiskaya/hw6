@@ -61,18 +61,46 @@
                 </button>
                 <form class="contact-form">
                    <h2 class="modal-title title" >Оставьте свои данные, мы вам перезвоним</h2> 
+                   <div class="form-div" >
+                        <label class="user-form-label" for="user-name">
+                           Имя
+                        </label>
+                        <input class="user-form-input" type="text" name="name" id="user-name" >
+                        <svg width=12px height=12px class="label-icon">
+                            <use href="./images/sprite.svg#name"></use>
+                        </svg> 
+                   </div>
 
-                   <label class="user-form-label" for="user-name">Имя</label>
-                   <input class="user-form-input" type="text" name="name" id="user-name">
+                   <div class="form-div">
+                       <label class="user-form-label" for="user-tel" >
+                           Телефон
+                       </label>
+                        <input class="user-form-input" type="tel" name="tel" id="user-tel" >
+                        <svg width=14px height=14px class="label-icon">
+                              <use href="./images/sprite.svg#tel"></use>
+                        </svg>                   
+                   </div>
 
-                   <label class="user-form-label" for="user-tel">Телефон</label>
-                   <input class="user-form-input" type="tel" name="tel" id="user-tel">
+                   <div class="form-div">
+                       <label class="user-form-label" for="user-email">
+                           Почта
+                        </label>
+                        <input class="user-form-input" type="email" name="email" id="user-email" >
+                        <svg width=16px height=12px class="label-icon">
+                            <use href="./images/sprite.svg#mail"></use>
+                        </svg> 
+                   </div>
 
-                   <label class="user-form-label" for="user-email">Почта</label>
-                   <input class="user-form-input" type="email" name="email" id="user-email">
+                    <label class="user-form-label" >Комментарий</label>
+                    <textarea class="form-message" name="user-message" placeholder="Введите текст" id="user-message" ></textarea>
 
-                    <label class="user-form-label" for="user-message">Комментарий</label>
-                   <textarea class="form-message" name="user-message" placeholder="Введите текст" id="user-message" ></textarea>
+                    <label class="agree-checkbox">
+                        <input class="checkbox" type="checkbox" value="agree-checkbox">
+                        <span class="custom-checkbox"></span>
+                        <span class="agree-text" >Соглашаюсь с рассылкой и принимаю <a class="contract link"  href="">Условия договора</a></span>
+                    </label>
+
+                    <button class="modal-submit-btn btn" type="submit">Отправить</button>
                 </form>
                 
             </div>
