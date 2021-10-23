@@ -1,0 +1,122 @@
+.navigation-list{
+    display: flex; 
+   }
+   
+   .navigation-list-item:not(:last-child){
+   margin-right: 52px;
+   }
+   
+   .navigation{
+     display: flex;
+     align-items: center;
+   }
+   
+   .logo{
+     margin-right: 95px;
+   }
+   
+   .header-adress-list{
+     display: flex;
+    }
+   
+   .header-adress-list-item:not(:last-child){
+     margin-right: 51px;
+   }
+   
+   .header{
+     .container{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+    }
+   }
+       
+   .logo {
+    @extend %logo;
+   }
+   
+   .logo-accent {
+     color:$accent-color;
+   }
+   
+   .navigation-list-link {
+     position: relative;
+     font-weight: 500;
+     font-size: 14px;
+     line-height: 1.14;
+     letter-spacing: 0.02em;
+     text-decoration: none;
+     color:$title-dark-color;
+     
+   
+     padding-top: 32px;
+     padding-bottom: 32px;
+   
+     transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
+     &:hover, &:focus, &:active{
+      @extend %accent-color-for-link-and-btn;
+     }
+
+     &::after{
+        position: absolute;
+        bottom: 0;
+        transform: translateY(1.33px);
+        z-index: 1;
+        display: block;
+      
+        content: "";
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color:$accent-color;
+      
+        opacity: 0;
+        transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+      }
+
+      &:hover::after{
+        opacity: 1;
+      }
+   }
+       
+   .current-page {
+      @extend %accent-color-for-link-and-btn;
+    } 
+       
+   .header-adress-link{
+     @extend %adress-link-map;
+     align-items: center;
+     padding-top: 32px;
+     padding-bottom: 32px;
+
+     &:hover, &:focus{
+      @extend %accent-color-for-link-and-btn;
+     }
+   }
+   
+   .header-icon-mail{
+      @extend %header-icon;
+      .header-adress-link:hover &, 
+      .header-adress-link:focus &{
+        fill:$accent-color;
+      }
+   }
+   
+    .header-icon-tel{
+    @extend %header-icon;
+    .header-adress-link:hover &, 
+    .header-adress-link:focus &{
+        fill:$accent-color;
+      }
+   }
+   
+    .header-tel {
+      @extend %display-flex;
+    }
+    
+    .header-mail {
+      @extend %display-flex;
+   }
+
+   

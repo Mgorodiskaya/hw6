@@ -1,0 +1,141 @@
+.footer {
+  background-color:$background-dark-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-adress-map {
+  @extend %adress-link-map;
+  color:$title-white-color;
+  line-height: 1.71;
+
+  &:hover, &:focus{
+    @extend %accent-color-for-link-and-btn;
+  }
+}
+
+.footer-adress-link {
+  @extend %adress-link-map;
+  color:$text-color-dark-thema;
+  line-height: 1.71;
+  
+  &:hover, &:focus{
+    @extend %accent-color-for-link-and-btn;
+  }
+}
+
+.footer-logo {
+  @extend %logo;
+  color:$title-white-color;
+
+  margin-bottom: 20px;
+}
+
+
+.footer-list-item:not(:last-child){
+  margin-bottom: 9px;
+}
+
+.footer-container{
+  display: flex;
+}
+
+.footer-adress{
+  margin-right: 70px;
+}
+
+.invite, .mailing{
+  margin-top: 12px;
+}
+
+.footer-invite, .mailing-text{
+font-family: Roboto;
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+text-transform: uppercase;
+
+color:$title-white-color;
+
+margin-bottom: 20px;
+}
+
+.footer-social-list{
+display: flex;
+}
+
+.footer-social-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-right: 10px;
+
+  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  }
+
+.footer-social-icon {
+    fill:$title-white-color;
+    transition: fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color:$accent-color;
+}
+
+.footer-social-link:hover .footer-social-icon,
+.footer-social-link:focus .footer-social-icon {
+  fill: white;
+}
+
+.mailing {
+  justify-content: flex-end;
+  width: 570px;
+  margin-left: 93px;
+}
+
+.mailing-form {
+  display: flex;
+  align-items: flex-start;
+}
+
+.mailing-text {
+  display: block;
+} 
+
+.mailing-input {
+width: 358px;
+height: 50px;
+color: #EEE;
+border-width: 1px;
+border-style: solid;
+border-color: rgba(255, 255, 255, 0.3);
+border-image: none;
+
+border-radius: 4px;
+background-color:$background-dark-color;
+padding-left: 15px;
+}
+
+.mailing-btn {
+@extend %btn;
+box-shadow: 0ch;
+background-image: url(../images/send.svg);
+background-repeat: no-repeat;
+background-size: 24px;
+border: none;
+
+text-align: left;
+padding-left: 24px;
+background-position: right 28px bottom 13px;
+ &:hover {
+  color: #e4fa6a;
+  background-color: #0f1975;
+  border-color: #0f1975;
+}
+}
+
