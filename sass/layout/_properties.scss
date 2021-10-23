@@ -1,6 +1,5 @@
-.properties, .team, .clients{
-  padding-top: 94px;
-  padding-bottom: 94px;
+.properties {
+ @extend %padding-for-parts;
 }
 
 .properties-icon{

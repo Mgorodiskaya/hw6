@@ -1,5 +1,6 @@
 .team{
-  background-color: #F5F4FA;
+  @extend %padding-for-parts;
+  background-color: $background-gray-color;
 }
 
 .team-list {
@@ -50,22 +51,23 @@ justify-content: space-between;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: white;
+  background-color: $title-white-color;
 
   transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-  }
+  
+  &:hover, &:focus{
+  background-color:$accent-color;
+   }
+}
 
 .social-icon {
     fill: #AFB1B8;
     transition: fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    
+    .social-link:hover &,
+    .social-link:focus &{
+      fill: white;
+    }
  }
 
-.social-link:hover,
-.social-link:focus{
-  background-color:$accent-color;
-}
 
-.social-link:hover .social-icon,
-.social-link:focus .social-icon{
-  fill: white;
-}

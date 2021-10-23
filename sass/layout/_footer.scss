@@ -2,6 +2,10 @@
   background-color:$background-dark-color;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  &-container {
+    display: flex;
+  }
 }
 
 .footer-adress-map {
@@ -26,7 +30,7 @@
 
 .footer-logo {
   @extend %logo;
-  color:$title-white-color;
+  color:white;
 
   margin-bottom: 20px;
 }
@@ -36,28 +40,16 @@
   margin-bottom: 9px;
 }
 
-.footer-container{
-  display: flex;
-}
-
 .footer-adress{
   margin-right: 70px;
 }
 
-.invite, .mailing{
+.invite {
   margin-top: 12px;
 }
 
-.footer-invite, .mailing-text{
-font-family: Roboto;
-font-weight: 700;
-font-size: 14px;
-line-height: 1.14;
-text-transform: uppercase;
-
-color:$title-white-color;
-
-margin-bottom: 20px;
+.footer-invite {
+@extend %text-in-footer;
 }
 
 .footer-social-list{
@@ -75,27 +67,26 @@ display: flex;
   margin-right: 10px;
 
   transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-  }
+  &:hover, &:focus {
+    background-color:$accent-color;
+  } 
+}
 
 .footer-social-icon {
     fill:$title-white-color;
     transition: fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-}
-
-.footer-social-link:hover,
-.footer-social-link:focus {
-  background-color:$accent-color;
-}
-
-.footer-social-link:hover .footer-social-icon,
-.footer-social-link:focus .footer-social-icon {
-  fill: white;
+    
+    .footer-social-link:hover &,
+    .footer-social-link:focus & {
+      fill: white;
+  }
 }
 
 .mailing {
   justify-content: flex-end;
   width: 570px;
   margin-left: 93px;
+  margin-top: 12px;
 }
 
 .mailing-form {
@@ -104,6 +95,7 @@ display: flex;
 }
 
 .mailing-text {
+  @extend %text-in-footer;
   display: block;
 } 
 
@@ -132,10 +124,10 @@ border: none;
 text-align: left;
 padding-left: 24px;
 background-position: right 28px bottom 13px;
- &:hover {
+  
+&:hover {
   color: #e4fa6a;
   background-color: #0f1975;
   border-color: #0f1975;
+}  
 }
-}
-
