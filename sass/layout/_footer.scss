@@ -29,12 +29,10 @@
 }
 
 .footer-logo {
-  @extend %logo;
   color:white;
-
   margin-bottom: 20px;
+  margin-right: 0;
 }
-
 
 .footer-list-item:not(:last-child){
   margin-bottom: 9px;
@@ -57,30 +55,13 @@ display: flex;
 }
 
 .footer-social-link{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   margin-right: 10px;
-
-  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-  &:hover, &:focus {
-    background-color:$accent-color;
-  } 
-}
+  }
 
 .footer-social-icon {
     fill:$title-white-color;
-    transition: fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-    
-    .footer-social-link:hover &,
-    .footer-social-link:focus & {
-      fill: white;
-  }
-}
+   }
 
 .mailing {
   justify-content: flex-end;

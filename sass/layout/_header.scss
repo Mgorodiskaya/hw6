@@ -1,5 +1,8 @@
 .navigation-list{
     display: flex; 
+    .current-page {
+      @extend %accent-color-for-link-and-btn;
+    } 
    }
    
    .navigation-list-item:not(:last-child){
@@ -23,18 +26,14 @@
      margin-right: 51px;
    }
    
-   .header{
+   .header {
      .container{
      display: flex;
      align-items: center;
      justify-content: space-between;
     }
    }
-       
-   .logo {
-    @extend %logo;
-   }
-   
+          
    .logo-accent {
      color:$accent-color;
    }
@@ -80,9 +79,7 @@
       }
    }
        
-   .current-page {
-      @extend %accent-color-for-link-and-btn;
-    } 
+   
        
    .header-adress-link{
      @extend %adress-link-map;
